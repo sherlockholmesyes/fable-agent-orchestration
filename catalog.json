@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "license": "Apache-2.0",
+  "project": "fable-agent-orchestration",
+  "description": "Public-clean database of Fable-style agent orchestration skills.",
+  "clean_public_boundary": [
+    "No private formulas or methodology names",
+    "No private peer identities",
+    "No private continuity-system details",
+    "No third-party source dumps or reverse-engineering artifacts",
+    "No keys, tokens, or secrets"
+  ],
+  "skills": [
+    {
+      "id": "fable-orchestrator",
+      "path": "skills/fable-orchestrator/SKILL.md",
+      "role": "outer-loop coordinator",
+      "trigger": "large multi-change engagement that needs several agents and serialized merge control",
+      "primary_gate": "one PR per invariant, independent review, current CI"
+    },
+    {
+      "id": "one-slice-worker-cycle",
+      "path": "skills/one-slice-worker-cycle/SKILL.md",
+      "role": "single-slice implementation worker",
+      "trigger": "correctness-critical slice requiring investigation, narrow build, and falsification",
+      "primary_gate": "hazards named, narrow diff, fail-under-broken proof"
+    },
+    {
+      "id": "agent-pr-validator",
+      "path": "skills/agent-pr-validator/SKILL.md",
+      "role": "agent pull request validator",
+      "trigger": "an agent-generated pull request or merged change needs validation",
+      "primary_gate": "claim-to-diff mapping plus CI and test evidence"
+    },
+    {
+      "id": "adversarial-reviewer",
+      "path": "skills/adversarial-reviewer/SKILL.md",
+      "role": "independent reviewer",
+      "trigger": "load-bearing code, test, plan, or release claim needs refutation pressure",
+      "primary_gate": "strongest real objection checked against current artifacts"
+    },
+    {
+      "id": "task-relative-test-gate",
+      "path": "skills/task-relative-test-gate/SKILL.md",
+      "role": "test-ruler validator",
+      "trigger": "a feature or fix is claimed working and generic green tests are insufficient",
+      "primary_gate": "test fails under broken behavior and passes under fixed behavior"
+    },
+    {
+      "id": "review-verifier",
+      "path": "skills/review-verifier/SKILL.md",
+      "role": "review verdict checker",
+      "trigger": "a reviewer claims PASS or FIX_FIRST and the conductor must verify the verdict",
+      "primary_gate": "spot-check load-bearing reviewer claims at current HEAD"
+    },
+    {
+      "id": "orphaned-wip-adopter",
+      "path": "skills/orphaned-wip-adopter/SKILL.md",
+      "role": "stalled work salvage",
+      "trigger": "a parallel worker left coherent uncommitted work in a stale worktree",
+      "primary_gate": "stale confirmed, work exercised, rebased, finished, reviewed"
+    },
+    {
+      "id": "peer-review-packet",
+      "path": "skills/peer-review-packet/SKILL.md",
+      "role": "external review packet builder",
+      "trigger": "a structural decision needs outside correlation without dumping a workspace",
+      "primary_gate": "small OPSEC-clean decision packet and verified answer intake"
+    },
+    {
+      "id": "external-workflow-adapter",
+      "path": "skills/external-workflow-adapter/SKILL.md",
+      "role": "third-party workflow adapter",
+      "trigger": "adopting a workflow from another agent system, marketplace, or skill pack",
+      "primary_gate": "useful primitives extracted, hidden assumptions rewritten, proof gates named"
+    }
+  ]
+}

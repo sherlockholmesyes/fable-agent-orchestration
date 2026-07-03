@@ -1,29 +1,85 @@
-# fable — an agent-orchestration skill for Claude Code
+# fable-agent-orchestration
 
-A [Claude Code](https://claude.com/claude-code) skill: an orchestration playbook for driving a **large multi-change engagement** (many pull requests) as a *coordinator running coding agents*, rather than hand-coding every change yourself.
+Apache-2.0 skill database for Fable-style agent orchestration.
 
-It was distilled from a single session that drove roughly two dozen agents to roughly two dozen merged PRs, and it captures the loop — and the disciplines — that kept that honest.
+The repo provides a public-clean set of reusable AI-agent workflow skills:
+coordinate many coding agents, keep work isolated in git worktrees, validate
+agent pull requests against real diffs and CI, and prevent fake-green tests.
 
-## The idea
+This is intentionally generic. It does not include private project formulas,
+identity material, private continuity-system details, third-party source, keys, or
+closed operational notes.
 
-You are the **conductor**: you hold the conclusions and the merge-gate; the agents hold the file-dumps.
+## Contents
 
-- **The core loop** — launch a build-agent per slice in its own git worktree → an independent review agent per PR → verify the review against ground truth → merge on pass → relaunch.
-- **When to spawn an agent vs do it yourself** — the axis is *parallelism-gain*, not size: "will I launch this and immediately go do something else?"
-- **The disciplines that keep it honest** — one PR per concern, a fail-under-broken test, investigate-first, verify-the-reviewer, structural-guarantees-over-flags, sabotage negative-controls, and more.
-- **The inner worker-cycle** — investigate → build narrow → prove by falsification.
-- **The tempo** — continuous bounded flow: every turn ends with work in flight; never idle, never a dead stop.
-- **Scaling** — how to dispatch tasks to worker sessions when the backlog exceeds your own agents.
+- `SKILL.md` - single-file Fable orchestration skill.
+- `catalog.json` - machine-readable index of the clean skill database.
+- `schemas/skill-record.schema.json` - schema for catalog entries.
+- `skills/*/SKILL.md` - individual public-clean skills.
+
+Current skill records:
+
+- `fable-orchestrator`
+- `one-slice-worker-cycle`
+- `agent-pr-validator`
+- `adversarial-reviewer`
+- `task-relative-test-gate`
+- `review-verifier`
+- `orphaned-wip-adopter`
+- `peer-review-packet`
+- `external-workflow-adapter`
 
 ## Install
 
-Copy `SKILL.md` into a `fable/` folder under your Claude Code skills directory:
+For the compact version, copy the root `SKILL.md` into your local skills folder:
 
-```
+```text
 ~/.claude/skills/fable/SKILL.md
 ```
 
-Claude Code discovers it automatically. It fires when a task is bigger than one change and you should be conducting agents rather than typing.
+For modular use, copy any folder from `skills/` into your agent's skills
+directory.
+
+## Core idea
+
+The user or lead agent acts as a conductor. Agents do implementation slices.
+The conductor owns scope, evidence, review, and merge decisions.
+
+The reliable loop:
+
+1. Split work into independent slices.
+2. Launch one build agent per slice in an isolated git worktree.
+3. Require each agent to open a pull request, not merge it.
+4. Review each PR with an independent critic focused on the invariant at risk.
+5. Verify the critic's claims against the current code and CI.
+6. Merge one PR at a time on green evidence.
+7. Relaunch the next slice while reviews and CI run.
+
+The rule of thumb for delegation:
+
+> Spawn an agent only when you will immediately go do something else.
+
+If you would sit and wait, the agent adds overhead instead of throughput.
+
+## Clean-public boundary
+
+This repo includes only generic engineering workflow primitives:
+
+- worktree isolation;
+- fail-under-broken tests;
+- sabotage or negative-control checks;
+- PR claim-to-diff validation;
+- CI and runtime evidence review;
+- stale review detection;
+- recovery of stalled work.
+
+It excludes:
+
+- private formulas or methodology names;
+- private peer identities or memory systems;
+- third-party source dumps or reverse-engineering artifacts;
+- project secrets or credentials;
+- private business, product, or architecture notes.
 
 ## License
 
