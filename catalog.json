@@ -19,11 +19,25 @@
       "primary_gate": "one PR per invariant, independent review, current CI"
     },
     {
+      "id": "think-work-try",
+      "path": "skills/think-work-try/SKILL.md",
+      "role": "single-slice worker cycle",
+      "trigger": "one delicate slice needs investigation, narrow implementation, and falsification proof",
+      "primary_gate": "think hazards named, work narrow, try proof passes"
+    },
+    {
       "id": "one-slice-worker-cycle",
       "path": "skills/one-slice-worker-cycle/SKILL.md",
       "role": "single-slice implementation worker",
       "trigger": "correctness-critical slice requiring investigation, narrow build, and falsification",
       "primary_gate": "hazards named, narrow diff, fail-under-broken proof"
+    },
+    {
+      "id": "two-critic-review-loop",
+      "path": "skills/two-critic-review-loop/SKILL.md",
+      "role": "separate verifier loop",
+      "trigger": "an agent PR needs both proof validation and code review before merge",
+      "primary_gate": "test critic and change critic both pass, then reviewer claims are verified"
     },
     {
       "id": "agent-pr-validator",

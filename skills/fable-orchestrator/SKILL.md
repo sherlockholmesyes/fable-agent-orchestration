@@ -14,8 +14,10 @@ Act as the conductor for many implementation slices.
 3. Give each agent one invariant or product concern, explicit non-scope, and
    required proof.
 4. Require a pull request, not a direct merge.
-5. Start an independent review for each PR.
-6. Verify the review against the current diff, current CI, and current code.
+5. Start two independent critics for each non-trivial PR:
+   - a test critic for the gate;
+   - a change critic for the code and architecture.
+6. Verify both critics against the current diff, current CI, and current code.
 7. Merge one PR at a time only after evidence is current.
 8. Relaunch the next slice as soon as capacity opens.
 
@@ -28,6 +30,7 @@ runs. If you would wait for it, the agent adds overhead instead of throughput.
 
 - One PR per invariant or concern.
 - Behavior changes need fail-under-broken tests.
+- Non-trivial PRs need two verifier contexts: proof review and change review.
 - Current CI beats screenshots and summaries.
 - Rebase or rerun when the base moved.
 - Record residuals instead of hiding them in a green merge.

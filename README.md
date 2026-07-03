@@ -20,7 +20,9 @@ closed operational notes.
 Current skill records:
 
 - `fable-orchestrator`
+- `think-work-try`
 - `one-slice-worker-cycle`
+- `two-critic-review-loop`
 - `agent-pr-validator`
 - `adversarial-reviewer`
 - `task-relative-test-gate`
@@ -50,8 +52,9 @@ The reliable loop:
 1. Split work into independent slices.
 2. Launch one build agent per slice in an isolated git worktree.
 3. Require each agent to open a pull request, not merge it.
-4. Review each PR with an independent critic focused on the invariant at risk.
-5. Verify the critic's claims against the current code and CI.
+4. Run two separate critics: one critic reviews the test gate, and one critic
+   reviews the code change.
+5. Verify the critics' claims against the current code and CI.
 6. Merge one PR at a time on green evidence.
 7. Relaunch the next slice while reviews and CI run.
 
@@ -68,6 +71,7 @@ This repo includes only generic engineering workflow primitives:
 - worktree isolation;
 - fail-under-broken tests;
 - sabotage or negative-control checks;
+- two separate critic roles for tests and code review;
 - PR claim-to-diff validation;
 - CI and runtime evidence review;
 - stale review detection;

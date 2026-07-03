@@ -34,7 +34,9 @@ Do not call the slice complete until evidence discriminates broken from fixed.
 - Exercise production functions, not a reimplementation inside the test.
 - Run a negative-control or sabotage variant when practical.
 - Run the relevant full gate.
-- Send the PR to independent review.
+- Send the PR to two independent critics:
+  - the test critic checks whether the gate proves the task;
+  - the change critic checks whether the implementation is safe.
 
 ## Result States
 
