@@ -111,6 +111,13 @@
       "primary_gate": "useful primitives extracted, hidden assumptions rewritten, proof gates named"
     },
     {
+      "id": "contributor-rigor-pack",
+      "path": "skills/contributor-rigor-pack/SKILL.md",
+      "role": "public contribution quality gate",
+      "trigger": "a public repository patch needs a current-state check, narrow scope, proof command, adversarial check, and compact PR report",
+      "primary_gate": "task contract written before edits; proof command maps to the changed behavior; residuals are explicit"
+    },
+    {
       "id": "instruction-drift-control",
       "path": "skills/instruction-drift-control/SKILL.md",
       "role": "agent instruction drift controller",
