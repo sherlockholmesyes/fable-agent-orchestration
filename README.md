@@ -37,6 +37,7 @@ Current skill records:
 - `external-workflow-adapter`
 - `instruction-drift-control`
 - `behavior-contract-harness`
+- `phase-aware-engineering-ladder`
 - `investigate-before-fix`
 - `long-run-continuity`
 - `easy-vs-right-check`
@@ -99,7 +100,9 @@ This repo includes only generic engineering workflow primitives:
 - instruction-drift control for canonical agent guides, fix logs, and
   keep-in-sync contracts;
 - behavior-contract harnesses for prompts, hooks, eval probes, telemetry, and
-  real-work regression gates.
+  real-work regression gates;
+- phase-aware engineering ladders that scale verification depth without
+  weakening the security and data-loss floor.
 
 It excludes:
 
@@ -143,6 +146,20 @@ installer, hooks, or project instructions.
 The resulting skill is a rewritten synthesis for generic agent behavior
 contracts. It does not copy upstream hooks, scripts, transcripts, prompts, or
 project instructions.
+
+### senior-engineering-partner
+
+- Source: <https://github.com/bjgreenberg/senior-engineering-partner>
+- License: Apache License 2.0
+- Inspected commit: `8b4bb74600a3b49edcb9bb4a7f7522580a883040`
+- Used for: inspiration for the `phase-aware-engineering-ladder` skill's public
+  treatment of prototype/MVP/production rigor, fixed security floor, promotion
+  triggers, and deferred gates.
+- Vendored code: none.
+
+The resulting skill is a rewritten synthesis for this repository's bounded
+agent orchestration model. It does not copy upstream scripts, references, eval
+scenarios, or project instructions.
 
 ## License
 
