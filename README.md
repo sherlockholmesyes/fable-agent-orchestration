@@ -15,6 +15,8 @@ closed operational notes.
 - `SKILL.md` - single-file Fable orchestration skill.
 - `PUBLIC_GOAL_PLAYBOOK.md` - standalone public goal prompt/playbook for
   applying the orchestration pattern in other agent workspaces.
+- `CREDITS.md` - attribution for public workflow ideas adapted from
+  permissively licensed projects.
 - `catalog.json` - machine-readable index of the clean skill database.
 - `schemas/skill-record.schema.json` - schema for catalog entries.
 - `skills/*/SKILL.md` - individual public-clean skills.
@@ -35,6 +37,7 @@ Current skill records:
 - `peer-review-packet`
 - `fable-session-skill-miner`
 - `external-workflow-adapter`
+- `instruction-drift-control`
 - `investigate-before-fix`
 - `long-run-continuity`
 - `easy-vs-right-check`
@@ -94,6 +97,8 @@ This repo includes only generic engineering workflow primitives:
 - recovery of stalled work;
 - autonomous finish-loop discipline for reversible in-scope work;
 - label-stripping session mining for reusable skills.
+- instruction-drift control for canonical agent guides, fix logs, and
+  keep-in-sync contracts.
 
 It excludes:
 
