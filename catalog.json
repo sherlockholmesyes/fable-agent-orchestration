@@ -8,6 +8,7 @@
     "No private peer identities",
     "No private continuity-system details",
     "No third-party source dumps or reverse-engineering artifacts",
+    "No raw session transcripts or bulky logs",
     "No keys, tokens, or secrets"
   ],
   "skills": [
@@ -17,6 +18,13 @@
       "role": "outer-loop coordinator",
       "trigger": "large multi-change engagement that needs several agents and serialized merge control",
       "primary_gate": "one PR per invariant, independent review, current CI"
+    },
+    {
+      "id": "autonomous-finish-loop",
+      "path": "skills/autonomous-finish-loop/SKILL.md",
+      "role": "turn-completion discipline",
+      "trigger": "safe reversible work remains after a plan, tool event, CI event, or agent completion",
+      "primary_gate": "real artifact or gate checked before final report; only external gates stop the turn"
     },
     {
       "id": "think-work-try",
@@ -75,11 +83,25 @@
       "primary_gate": "stale confirmed, work exercised, rebased, finished, reviewed"
     },
     {
+      "id": "agent-dispatch-packet",
+      "path": "skills/agent-dispatch-packet/SKILL.md",
+      "role": "delegated-agent packet builder",
+      "trigger": "a conductor is about to delegate implementation, exploration, review, verification, or reconciliation work",
+      "primary_gate": "role, scope, invariant, non-scope, fail-under-broken gate, output contract, and registry row are explicit"
+    },
+    {
       "id": "peer-review-packet",
       "path": "skills/peer-review-packet/SKILL.md",
       "role": "external review packet builder",
       "trigger": "a structural decision needs outside correlation without dumping a workspace",
       "primary_gate": "small OPSEC-clean decision packet and verified answer intake"
+    },
+    {
+      "id": "session-skill-miner",
+      "path": "skills/session-skill-miner/SKILL.md",
+      "role": "agent-session skill miner",
+      "trigger": "agent session logs, reports, or repeated orchestration mechanics may contain reusable skills",
+      "primary_gate": "label stripped, closest existing skill compared, evidence anchored, procedure and validation gate explicit, OPSEC clean"
     },
     {
       "id": "external-workflow-adapter",
