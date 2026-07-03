@@ -87,6 +87,41 @@
       "role": "third-party workflow adapter",
       "trigger": "adopting a workflow from another agent system, marketplace, or skill pack",
       "primary_gate": "useful primitives extracted, hidden assumptions rewritten, proof gates named"
+    },
+    {
+      "id": "investigate-before-fix",
+      "path": "skills/investigate-before-fix/SKILL.md",
+      "role": "pre-fix diagnosis verification",
+      "trigger": "a fix is proposed for a diagnosed cause on a delicate, hot-path, security, or recovery change",
+      "primary_gate": "the cause is reproduced at current HEAD before any fix, or the diagnosis is refuted"
+    },
+    {
+      "id": "long-run-continuity",
+      "path": "skills/long-run-continuity/SKILL.md",
+      "role": "long-engagement continuity",
+      "trigger": "a multi-PR run will cross a context or session boundary",
+      "primary_gate": "queue, in-flight PRs, and open findings persisted to durable storage"
+    },
+    {
+      "id": "easy-vs-right-check",
+      "path": "skills/easy-vs-right-check/SKILL.md",
+      "role": "self-honesty checkpoint",
+      "trigger": "before a step that feels like progress, or before holding or stopping",
+      "primary_gate": "the step attacks the real work not a proxy, and no premature stop while autonomous work remains"
+    },
+    {
+      "id": "periodic-retrospect",
+      "path": "skills/periodic-retrospect/SKILL.md",
+      "role": "periodic self-review",
+      "trigger": "on a stall, and at intervals regardless",
+      "primary_gate": "repeated patterns named, dropped threads recovered, value alignment re-checked"
+    },
+    {
+      "id": "seal-both-types",
+      "path": "skills/seal-both-types/SKILL.md",
+      "role": "type-construction safety",
+      "trigger": "a typed contract treats possession of a value as proof it passed a check",
+      "primary_gate": "both accepted and reject types sealed against external construction"
     }
   ]
 }
