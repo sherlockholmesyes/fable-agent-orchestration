@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sherlockholmesyes/fable-agent-orchestration/schemas/skill-record.schema.json",
+  "title": "Fable Skill Catalog",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "license",
+    "project",
+    "description",
+    "clean_public_boundary",
+    "skills"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "license": {
+      "const": "Apache-2.0"
+    },
+    "project": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "clean_public_boundary": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "skills": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "path",
+          "role",
+          "trigger",
+          "primary_gate"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]{1,80}$"
+          },
+          "path": {
+            "type": "string",
+            "pattern": "^skills/[a-z0-9-]+/SKILL\\.md$"
+          },
+          "role": {
+            "type": "string",
+            "minLength": 1
+          },
+          "trigger": {
+            "type": "string",
+            "minLength": 1
+          },
+          "primary_gate": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
