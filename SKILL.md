@@ -18,10 +18,13 @@ inner loop on one slice: investigate, build narrow, prove by falsification.
    Example: `git worktree add <path> origin/main -b codex/<slice-name>`.
 2. Give the agent one invariant or product slice, explicit non-scope, and the
    required proof. The agent opens a pull request and does not merge.
-3. Launch an independent review agent focused on the one risk that could make
-   the PR unsafe.
-4. Verify the review against the current diff, current CI, and the actual code
-   at HEAD. A review can be stale or wrong.
+3. Launch two separate critics:
+   - a test-gate critic that checks whether the proof is task-relative and
+     would fail under the broken behavior;
+   - an adversarial change critic that reviews the code, architecture, and
+     operational risk.
+4. Verify both critics against the current diff, current CI, and the actual
+   code at HEAD. A review can be stale or wrong.
 5. Land real follow-ups in the same PR.
 6. Merge one PR at a time only on current evidence.
 7. Relaunch the next slice while other agents, reviews, and CI are running.
@@ -43,8 +46,9 @@ Do it yourself when:
 - investigation must be done before a safe delegation prompt can be written;
 - an agent has failed twice and a manual finish is faster.
 
-Always use independent review for load-bearing work. Do not spawn more agents
-than you can review and merge.
+Always use independent review for load-bearing work. For non-trivial slices,
+split review into two contexts: proof critic and change critic. Do not spawn
+more agents than you can review and merge.
 
 ## Disciplines
 
@@ -69,9 +73,9 @@ Use three phases with hard exits:
   enumerate concurrency or recovery interleavings.
 - Build narrow: leave only when the change is one coherent rule with a narrow
   diff. Do not bundle adjacent refactors.
-- Prove: leave only when task-relative gates and independent review are green.
-  Include a negative-control or sabotage check for critical behavior when
-  practical.
+- Prove: leave only when the task-relative test critic and the adversarial
+  change critic are both green. Include a negative-control or sabotage check
+  for critical behavior when practical.
 
 ## Tempo
 
