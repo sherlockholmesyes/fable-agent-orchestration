@@ -15,8 +15,6 @@ closed operational notes.
 - `SKILL.md` - single-file Fable orchestration skill.
 - `PUBLIC_GOAL_PLAYBOOK.md` - standalone public goal prompt/playbook for
   applying the orchestration pattern in other agent workspaces.
-- `CREDITS.md` - attribution for public workflow ideas adapted from
-  permissively licensed projects.
 - `catalog.json` - machine-readable index of the clean skill database.
 - `schemas/skill-record.schema.json` - schema for catalog entries.
 - `skills/*/SKILL.md` - individual public-clean skills.
@@ -96,7 +94,7 @@ This repo includes only generic engineering workflow primitives:
 - stale review detection;
 - recovery of stalled work;
 - autonomous finish-loop discipline for reversible in-scope work;
-- label-stripping session mining for reusable skills.
+- label-stripping session mining for reusable skills;
 - instruction-drift control for canonical agent guides, fix logs, and
   keep-in-sync contracts.
 
@@ -108,6 +106,26 @@ It excludes:
 - raw session transcripts or bulky logs;
 - project secrets or credentials;
 - private business, product, or architecture notes.
+
+## Credits
+
+This repository contains public-clean workflow skills and may adapt general
+workflow ideas from permissively licensed projects. It does not vendor external
+source code unless explicitly stated here.
+
+### agent-standard-oss
+
+- Source: <https://github.com/anmoln7/agent-standard-oss>
+- License: MIT License
+- Inspected commit: `263c7e8bbd2f337fcb1e0c352eaa2508192ce757`
+- Used for: inspiration for the `instruction-drift-control` skill's public
+  treatment of canonical agent instruction files, fix logs, keep-in-sync
+  contracts, verifier decay, and autonomous-loop contracts.
+- Vendored code: none.
+
+The resulting skill is a rewritten synthesis for this repository's public
+bounded-agent orchestration model, not a copy of the upstream scripts,
+installer, hooks, or project instructions.
 
 ## License
 
