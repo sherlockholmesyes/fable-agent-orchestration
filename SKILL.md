@@ -127,6 +127,9 @@ from artifacts before relaunching:
 - One PR per invariant or concern.
 - Every behavior claim needs a fail-under-broken gate that fails on the old
   broken behavior and exercises the production path.
+- When adopting a behavior profile, output style, hook set, or eval loop, treat
+  it as a behavior contract: name the behavior, enforcement surface, negative
+  controls, real-work telemetry, and false-positive budget.
 - Investigate before building on hot-path, security, durability, recovery, and
   concurrency slices.
 - Prefer structural guarantees over opt-in flags.
