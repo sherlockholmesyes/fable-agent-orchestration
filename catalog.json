@@ -125,6 +125,13 @@
       "primary_gate": "behavior named, enforcement surfaces classified, negative controls present, real-work telemetry or smoke evidence checked"
     },
     {
+      "id": "phase-aware-engineering-ladder",
+      "path": "skills/phase-aware-engineering-ladder/SKILL.md",
+      "role": "phase-aware rigor calibrator",
+      "trigger": "a prototype, MVP, production, security, recovery, or delivery decision needs the right amount of rigor",
+      "primary_gate": "phase named, fixed floor preserved, scaled gates chosen, deferred gates tied to promotion triggers"
+    },
+    {
       "id": "investigate-before-fix",
       "path": "skills/investigate-before-fix/SKILL.md",
       "role": "pre-fix diagnosis verification",

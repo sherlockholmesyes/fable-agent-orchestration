@@ -130,6 +130,10 @@ from artifacts before relaunching:
 - When adopting a behavior profile, output style, hook set, or eval loop, treat
   it as a behavior contract: name the behavior, enforcement surface, negative
   controls, real-work telemetry, and false-positive budget.
+- Match rigor to the project phase, but never weaken the fixed floor: no
+  secrets in code, boundary validation, no injection, isolated environments,
+  auth on exposed surfaces, least privilege, dependency vetting, visible
+  failures, and a recovery story for valuable data.
 - Investigate before building on hot-path, security, durability, recovery, and
   concurrency slices.
 - Prefer structural guarantees over opt-in flags.
