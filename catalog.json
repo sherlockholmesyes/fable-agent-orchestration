@@ -118,6 +118,13 @@
       "primary_gate": "canonical surface clear, duplicated rules removed or synced, fix-log entries evidence anchored"
     },
     {
+      "id": "behavior-contract-harness",
+      "path": "skills/behavior-contract-harness/SKILL.md",
+      "role": "agent behavior contract harness",
+      "trigger": "a behavior profile, output style, hook set, or eval loop claims to improve agent operating behavior",
+      "primary_gate": "behavior named, enforcement surfaces classified, negative controls present, real-work telemetry or smoke evidence checked"
+    },
+    {
       "id": "investigate-before-fix",
       "path": "skills/investigate-before-fix/SKILL.md",
       "role": "pre-fix diagnosis verification",

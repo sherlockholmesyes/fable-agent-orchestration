@@ -1,0 +1,6 @@
+*.gitattributes text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.sh text eol=lf
+SKILL.md text eol=lf
+skills/**/SKILL.md text eol=lf

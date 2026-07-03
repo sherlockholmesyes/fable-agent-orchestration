@@ -36,6 +36,7 @@ Current skill records:
 - `fable-session-skill-miner`
 - `external-workflow-adapter`
 - `instruction-drift-control`
+- `behavior-contract-harness`
 - `investigate-before-fix`
 - `long-run-continuity`
 - `easy-vs-right-check`
@@ -96,7 +97,9 @@ This repo includes only generic engineering workflow primitives:
 - autonomous finish-loop discipline for reversible in-scope work;
 - label-stripping session mining for reusable skills;
 - instruction-drift control for canonical agent guides, fix logs, and
-  keep-in-sync contracts.
+  keep-in-sync contracts;
+- behavior-contract harnesses for prompts, hooks, eval probes, telemetry, and
+  real-work regression gates.
 
 It excludes:
 
@@ -126,6 +129,20 @@ source code unless explicitly stated here.
 The resulting skill is a rewritten synthesis for this repository's public
 bounded-agent orchestration model, not a copy of the upstream scripts,
 installer, hooks, or project instructions.
+
+### opus-fable-playbook
+
+- Source: <https://github.com/rennf93/opus-fable-playbook>
+- License: MIT License
+- Inspected commit: `160acb6a59f83d80e45ef8e1148bac28bd46c143`
+- Used for: inspiration for the `behavior-contract-harness` skill's public
+  treatment of behavior doctrine, stop gates, prompt nudges, honesty hooks,
+  telemetry, critic agents, golden transcript evals, and measured variance.
+- Vendored code: none.
+
+The resulting skill is a rewritten synthesis for generic agent behavior
+contracts. It does not copy upstream hooks, scripts, transcripts, prompts, or
+project instructions.
 
 ## License
 
