@@ -1,9 +1,9 @@
 ---
-name: session-skill-miner
-description: Mine agent session logs, reports, or repeated orchestration mechanics into public-clean reusable skills. Use when a session appears to contain a durable procedure, but labels, private context, and raw logs must not leak into the skill.
+name: fable-session-skill-miner
+description: Mine Fable-style agent session logs, reports, or repeated orchestration mechanics into public-clean reusable skills. Use when a session appears to contain a durable procedure, but labels, private context, and raw logs must not leak into the skill.
 ---
 
-# Session Skill Miner
+# Fable Session Skill Miner
 
 Mine procedures, not labels.
 

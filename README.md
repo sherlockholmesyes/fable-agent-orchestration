@@ -33,7 +33,7 @@ Current skill records:
 - `orphaned-wip-adopter`
 - `agent-dispatch-packet`
 - `peer-review-packet`
-- `session-skill-miner`
+- `fable-session-skill-miner`
 - `external-workflow-adapter`
 - `investigate-before-fix`
 - `long-run-continuity`

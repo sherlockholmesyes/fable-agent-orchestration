@@ -97,8 +97,8 @@
       "primary_gate": "small OPSEC-clean decision packet and verified answer intake"
     },
     {
-      "id": "session-skill-miner",
-      "path": "skills/session-skill-miner/SKILL.md",
+      "id": "fable-session-skill-miner",
+      "path": "skills/fable-session-skill-miner/SKILL.md",
       "role": "agent-session skill miner",
       "trigger": "agent session logs, reports, or repeated orchestration mechanics may contain reusable skills",
       "primary_gate": "label stripped, closest existing skill compared, evidence anchored, procedure and validation gate explicit, OPSEC clean"
