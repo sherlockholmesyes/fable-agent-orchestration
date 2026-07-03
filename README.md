@@ -20,6 +20,7 @@ closed operational notes.
 Current skill records:
 
 - `fable-orchestrator`
+- `autonomous-finish-loop`
 - `think-work-try`
 - `one-slice-worker-cycle`
 - `two-critic-review-loop`
@@ -28,8 +29,15 @@ Current skill records:
 - `task-relative-test-gate`
 - `review-verifier`
 - `orphaned-wip-adopter`
+- `agent-dispatch-packet`
 - `peer-review-packet`
+- `session-skill-miner`
 - `external-workflow-adapter`
+- `investigate-before-fix`
+- `long-run-continuity`
+- `easy-vs-right-check`
+- `periodic-retrospect`
+- `seal-both-types`
 
 ## Install
 
@@ -51,12 +59,18 @@ The reliable loop:
 
 1. Split work into independent slices.
 2. Launch one build agent per slice in an isolated git worktree.
-3. Require each agent to open a pull request, not merge it.
-4. Run two separate critics: one critic reviews the test gate, and one critic
+3. Give every agent a packet with role, work scope, invariant, non-scope,
+   proof gate, output contract, and rules.
+4. Track every live worker in a parent registry so completion events are
+   routed to the right task and verified against real artifacts.
+5. Require each agent to open a pull request, not merge it.
+6. Run two separate critics: one critic reviews the test gate, and one critic
    reviews the code change.
-5. Verify the critics' claims against the current code and CI.
-6. Merge one PR at a time on green evidence.
-7. Relaunch the next slice while reviews and CI run.
+7. Verify the critics' claims against the current code and CI.
+8. Merge one PR at a time on green evidence.
+9. Relaunch the next slice while reviews and CI run.
+10. Do not stop on a plan, promise, or background notification while a
+    reversible next action remains.
 
 The rule of thumb for delegation:
 
@@ -75,13 +89,16 @@ This repo includes only generic engineering workflow primitives:
 - PR claim-to-diff validation;
 - CI and runtime evidence review;
 - stale review detection;
-- recovery of stalled work.
+- recovery of stalled work;
+- autonomous finish-loop discipline for reversible in-scope work;
+- label-stripping session mining for reusable skills.
 
 It excludes:
 
 - private formulas or methodology names;
 - private peer identities or memory systems;
 - third-party source dumps or reverse-engineering artifacts;
+- raw session transcripts or bulky logs;
 - project secrets or credentials;
 - private business, product, or architecture notes.
 
