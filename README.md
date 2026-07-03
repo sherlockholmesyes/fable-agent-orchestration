@@ -13,6 +13,8 @@ closed operational notes.
 ## Contents
 
 - `SKILL.md` - single-file Fable orchestration skill.
+- `PUBLIC_GOAL_PLAYBOOK.md` - standalone public goal prompt/playbook for
+  applying the orchestration pattern in other agent workspaces.
 - `catalog.json` - machine-readable index of the clean skill database.
 - `schemas/skill-record.schema.json` - schema for catalog entries.
 - `skills/*/SKILL.md` - individual public-clean skills.
