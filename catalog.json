@@ -111,6 +111,13 @@
       "primary_gate": "useful primitives extracted, hidden assumptions rewritten, proof gates named"
     },
     {
+      "id": "instruction-drift-control",
+      "path": "skills/instruction-drift-control/SKILL.md",
+      "role": "agent instruction drift controller",
+      "trigger": "agent instruction files, skills, README sections, or fix logs risk drifting apart",
+      "primary_gate": "canonical surface clear, duplicated rules removed or synced, fix-log entries evidence anchored"
+    },
+    {
       "id": "investigate-before-fix",
       "path": "skills/investigate-before-fix/SKILL.md",
       "role": "pre-fix diagnosis verification",
