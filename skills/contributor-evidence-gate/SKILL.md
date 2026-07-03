@@ -1,9 +1,9 @@
 ---
-name: contributor-rigor-pack
+name: contributor-evidence-gate
 description: Keep public repository contributions narrow, current, evidence-backed, and easy to review. Use before editing a public repo, preparing an AI-assisted patch, or writing a pull request that needs a clean task contract, live-state check, scope fence, adversarial check, and concise report.
 ---
 
-# Contributor Rigor Pack
+# Contributor Evidence Gate
 
 Use this when a public repository contribution must be small enough to review
 and concrete enough to prove. The goal is not to make a patch look disciplined.

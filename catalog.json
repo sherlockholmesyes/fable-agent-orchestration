@@ -111,8 +111,8 @@
       "primary_gate": "useful primitives extracted, hidden assumptions rewritten, proof gates named"
     },
     {
-      "id": "contributor-rigor-pack",
-      "path": "skills/contributor-rigor-pack/SKILL.md",
+      "id": "contributor-evidence-gate",
+      "path": "skills/contributor-evidence-gate/SKILL.md",
       "role": "public contribution quality gate",
       "trigger": "a public repository patch needs a current-state check, narrow scope, proof command, adversarial check, and compact PR report",
       "primary_gate": "task contract written before edits; proof command maps to the changed behavior; residuals are explicit"

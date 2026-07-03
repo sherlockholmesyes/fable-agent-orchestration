@@ -35,7 +35,7 @@ Current skill records:
 - `peer-review-packet`
 - `fable-session-skill-miner`
 - `external-workflow-adapter`
-- `contributor-rigor-pack`
+- `contributor-evidence-gate`
 - `instruction-drift-control`
 - `behavior-contract-harness`
 - `phase-aware-engineering-ladder`
