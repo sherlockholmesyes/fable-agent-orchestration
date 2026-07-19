@@ -1,6 +1,6 @@
 # fable-agent-orchestration
 
-Apache-2.0 skill database for Fable-style agent orchestration.
+AGPL-3.0-or-later skill database for Fable-style agent orchestration.
 
 The repo provides a public-clean set of reusable AI-agent workflow skills:
 coordinate many coding agents, keep work isolated in git worktrees, validate
@@ -164,4 +164,10 @@ scenarios, or project instructions.
 
 ## License
 
-[Apache License 2.0](LICENSE).
+The current version is licensed under the
+[GNU Affero General Public License v3.0 or later](LICENSE).
+
+Versions previously published under Apache-2.0 remain available under the
+license terms that accompanied those versions. The licenses and attribution
+details for independently developed upstream projects referenced as inspiration
+remain listed in [Credits](#credits).

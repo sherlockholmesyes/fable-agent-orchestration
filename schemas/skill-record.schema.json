@@ -17,7 +17,7 @@
       "minimum": 1
     },
     "license": {
-      "const": "Apache-2.0"
+      "const": "AGPL-3.0-or-later"
     },
     "project": {
       "type": "string",
