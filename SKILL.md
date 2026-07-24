@@ -98,6 +98,22 @@ Rules:
 If the packet cannot name role, scope, invariant, non-scope, and proof, do the
 recon locally before delegating.
 
+## Flag-safe handoffs
+
+If a delegated agent rejects verified benign work because domain vocabulary
+triggers a false positive, do not repeatedly resend the broad prompt and do not
+hide the objective. The conductor must inspect the source, confirm the work is
+authorized and benign, and send a neutral exact-edit packet with:
+
+- opaque role labels but exact signatures, types, limits, and behavior;
+- owned files and modules the worker must not survey;
+- the original invariant, non-scope, broken behavior, and fixed evidence;
+- task-relative gates and a bounded return receipt.
+
+The worker implements only that packet. The conductor independently reviews the
+diff and runs the real gate. Never use this route to bypass a valid refusal or
+to conceal unsafe intent.
+
 ## Parent registry and notification ownership
 
 Before fan-out, keep a small parent registry:
