@@ -90,6 +90,13 @@
       "primary_gate": "role, scope, invariant, non-scope, fail-under-broken gate, output contract, and registry row are explicit"
     },
     {
+      "id": "flag-safe-handoff",
+      "path": "skills/flag-safe-handoff/SKILL.md",
+      "role": "verified false-positive handoff adapter",
+      "trigger": "a delegated agent flags authorized benign work because domain vocabulary causes a demonstrated false positive",
+      "primary_gate": "conductor verifies benign scope, worker stays within exact edits, and task-relative proof passes under independent review"
+    },
+    {
       "id": "peer-review-packet",
       "path": "skills/peer-review-packet/SKILL.md",
       "role": "external review packet builder",

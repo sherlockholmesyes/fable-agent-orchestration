@@ -32,6 +32,7 @@ Current skill records:
 - `review-verifier`
 - `orphaned-wip-adopter`
 - `agent-dispatch-packet`
+- `flag-safe-handoff`
 - `peer-review-packet`
 - `fable-session-skill-miner`
 - `external-workflow-adapter`
@@ -96,6 +97,8 @@ This repo includes only generic engineering workflow primitives:
 - CI and runtime evidence review;
 - stale review detection;
 - recovery of stalled work;
+- bounded handling of verified vocabulary false positives without bypassing a
+  valid safety refusal;
 - autonomous finish-loop discipline for reversible in-scope work;
 - label-stripping session mining for reusable skills;
 - instruction-drift control for canonical agent guides, fix logs, and
